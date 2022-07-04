@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-# 2021/1/code2.py
+# 2021/01/code2.py
 
 
 if __name__ == '__main__':
+
     with open('input.txt', 'r') as f:
+
         file = f.read().split('\n')
         file.pop(len(file) - 1)
         file = list(map(int, file))
