@@ -9,7 +9,6 @@ if __name__ == '__main__':
         file = list(map(int, file))
         counter = 0
         for i in range(1, len(file) - 2):
-            if (file[i] + file[i + 1] + file[i + 2] >
-                    file[i - 1] + file[i] + file[i + 1]):
+            if file[i + 2] > file[i - 1]:
                 counter += 1
         print(counter)
