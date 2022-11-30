@@ -1,2 +1,7 @@
 __pycache__
-test.*
+test*
+
+.DS_Store
+.DS_Store?
+.Trashes
+Thumbs.db
