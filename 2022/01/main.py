@@ -1,6 +1,6 @@
 with open('input.txt', 'r') as f:
-    text = [list(map(int, line.strip().split('\n')))
-            for line in f.read().split('\n\n')]
+    text = [list(map(int, group.strip().split('\n')))
+            for group in f.read().split('\n\n')]
 sums = sorted(map(sum, text), reverse=True)
 
 # first
