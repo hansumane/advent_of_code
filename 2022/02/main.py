@@ -1,9 +1,14 @@
-# A, X = Rock     +1
-# B, Y = Paper    +2
-# C, Z = Scissors +3
-# loss +0
-# draw +3
-# win  +6
+# correct answers:
+# 1: 11841
+# 2: 13022
+
+# A, X = Rock      +1
+# B, Y = Paper     +2
+# C, Z = Scissors  +3
+
+#        loss      +0
+#        draw      +3
+#        win       +6
 
 
 def first(combs):
@@ -88,10 +93,8 @@ def second(combs):
     return score
 
 
-if __name__ == '__main__':
+with open('input.txt', 'r') as f:
+    lines = [line.strip().split() for line in f.readlines()]
 
-    with open('input.txt', 'r') as f:
-        lines = [line.strip().split() for line in f.readlines()]
-
-    print(first(lines))
-    print(second(lines))
+print(first(lines))
+print(second(lines))

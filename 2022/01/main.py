@@ -1,3 +1,8 @@
+# correct answers:
+# 1: 69912
+# 2: 208180
+
+
 with open('input.txt', 'r') as f:
     text = [list(map(int, group.strip().split('\n')))
             for group in f.read().split('\n\n')]
