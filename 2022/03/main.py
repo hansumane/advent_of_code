@@ -8,7 +8,7 @@ alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 with open('input.txt', 'r') as f:
     lines = [line.strip() for line in f.readlines()]
 
-# first part
+# first
 res = 0
 for line in lines:
     for symbol in line[:len(line) // 2]:
@@ -17,7 +17,7 @@ for line in lines:
             break
 print(res)
 
-# second part
+# second
 res = 0
 for group in [lines[i:i + 3] for i in range(0, len(lines), 3)]:
     for symbol in group[0]:
