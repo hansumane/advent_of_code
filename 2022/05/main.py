@@ -1,3 +1,8 @@
+# correct answers:
+# 1: SVFDLGLWV
+# 2: DCVTCVPCL
+
+
 with open('input.txt', 'r') as f:
     text = f.read()
 text = text.split('\n\n')
@@ -17,12 +22,12 @@ for instruction in instructions:
 
     mv, fr, to = instruction
 
-    # first (uncomment 3 next lines)
+    # first (uncomment 3 next lines and comment second)
     # for _ in range(mv):
     #     boxes[to - 1].append(boxes[fr - 1][-1])
     #     boxes[fr - 1].pop(-1)
 
-    # second (uncommecnt 3 next lines)
+    # second (uncommecnt 3 next lines and comment first)
     to_mv = boxes[fr - 1][-mv:]
     boxes[to - 1] += to_mv
     boxes[fr - 1][-mv:] = []
