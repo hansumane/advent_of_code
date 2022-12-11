@@ -1,4 +1,4 @@
-# correct answers:
+# Correct answers:
 # 1: 7826
 # 2: 2577
 

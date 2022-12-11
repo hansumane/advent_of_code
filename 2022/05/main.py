@@ -1,4 +1,4 @@
-# correct answers:
+# Correct answers:
 # 1: SVFDLGLWV
 # 2: DCVTCVPCL
 
@@ -7,6 +7,7 @@ with open('input.txt', 'r') as f:
     text = f.read()
 text = text.split('\n\n')
 
+# Insane barely readable code 0_0
 container = list(map(lambda x: [x[i: i + 4].strip() for i in range(0, len(x), 4)], text[0].splitlines()[:-1]))
 instructions = list(map(lambda x: list(map(int, x.replace('move', '').replace('from', '').replace('to', '').split())), text[1].splitlines()))
 

@@ -1,4 +1,4 @@
-# correct answers:
+# Correct answers:
 # 1: 11841
 # 2: 13022
 
@@ -9,6 +9,8 @@
 #        loss      +0
 #        draw      +3
 #        win       +6
+
+# I don't like the code :<
 
 
 def first(combs):
