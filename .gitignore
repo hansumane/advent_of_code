@@ -1,7 +1,29 @@
-__pycache__
-test*
+# python
+__pycache__/
+*.py[cod]
+*$py.class
 
-.DS_Store
-.DS_Store?
+# rust
+*.rs.bk
+
+# output binaries
+*.out
+out-*
+out_*
+
+# C/C++/Rust dynamic libraries
+*.so
+*.pdb
+*.dll
+*.dylib
+
+# various test/temporary files
+test.*
+test-*
+test_*
+
+# system files
 .Trashes
 Thumbs.db
+.DS_Store
+.DS_Store?
