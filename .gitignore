@@ -4,7 +4,9 @@ __pycache__/
 *$py.class
 
 # rust
+target/
 *.rs.bk
+Cargo.lock
 
 # output binaries
 *.out
