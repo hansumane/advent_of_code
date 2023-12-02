@@ -7,7 +7,7 @@ from sys import argv
 
 print('1)', sum(map(
     lambda v: v[0] * 10 + v[-1],
-    (list(map(int, filter(lambda v: v.isnumeric(), line)))
+    (list(map(int, filter(lambda v: v.isdecimal(), line)))
      for line in open(argv[1], "r").readlines())
     )))
 
