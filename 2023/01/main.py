@@ -5,7 +5,7 @@ from sys import argv
 
 # first
 
-print('1)', sum(map(
+print("1)", sum(map(
     lambda v: v[0] * 10 + v[-1],
     (list(map(int, filter(lambda v: v.isdecimal(), line)))
      for line in open(argv[1], "r").readlines())
@@ -13,13 +13,13 @@ print('1)', sum(map(
 
 # second
 
-l = [*map(str, range(10)), 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+l = [*map(str, range(10)), "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 def getval(ss):
     i = l.index(ss)
     return i - 9 if i >= 10 else i
 
 res = 0
-for line in open(argv[1], 'r').readlines():
+for line in open(argv[1], "r").readlines():
     ld = []
     for ss in l:
         f = -1
@@ -29,4 +29,4 @@ for line in open(argv[1], 'r').readlines():
     a = getval(ld[0][1])
     b = getval(ld[-1][1])
     res += a * 10 + b
-print('2)', res)
+print("2)", res)
