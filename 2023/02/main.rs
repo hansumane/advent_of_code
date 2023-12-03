@@ -19,7 +19,7 @@ fn main() {
 
                 'first: for game in line.split(": ").last().unwrap().split("; ") {
                     for cubes in game.split(", ") {
-                        let mut cubsplit = cubes.split(" ");
+                        let mut cubsplit = cubes.split(' ');
                         let (amount, color): (u64, &str) = (
                             cubsplit.next().unwrap().parse().unwrap(),
                             cubsplit.next().unwrap(),
@@ -39,7 +39,7 @@ fn main() {
 
                 for game in line.split(": ").last().unwrap().split("; ") {
                     for cubes in game.split(", ") {
-                        let mut cubsplit = cubes.split(" ");
+                        let mut cubsplit = cubes.split(' ');
                         let (amount, color): (u64, &str) = (
                             cubsplit.next().unwrap().parse().unwrap(),
                             cubsplit.next().unwrap(),
