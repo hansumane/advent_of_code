@@ -7,11 +7,7 @@ use std::{
 
 fn main() {
     let br = BufReader::new(File::open(args().collect::<Vec<_>>().get(1).unwrap()).unwrap());
-
-    let max_values: HashMap<&str, u64> = [("red", 12), ("green", 13), ("blue", 14)]
-        .iter()
-        .cloned()
-        .collect();
+    let max_values: HashMap<&str, u64> = HashMap::from([("red", 12), ("green", 13), ("blue", 14)]);
 
     let mut res1 = 0u64;
     let mut res2 = 0u64;
@@ -39,10 +35,7 @@ fn main() {
                     res1 += li as u64 + 1;
                 }
 
-                let mut mins: HashMap<&str, u64> = [("red", 0), ("green", 0), ("blue", 0)]
-                    .iter()
-                    .cloned()
-                    .collect();
+                let mut mins: HashMap<&str, u64> = HashMap::from([("red", 0), ("green", 0), ("blue", 0)]);
 
                 for game in line.split(": ").last().unwrap().split("; ") {
                     for cubes in game.split(", ") {

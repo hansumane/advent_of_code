@@ -14,7 +14,7 @@ fn main() {
         "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"
     ];
 
-    let translate: HashMap<&str, u64> = [
+    let translate: HashMap<&str, u64> = HashMap::from([
         ("one", 1),
         ("two", 2),
         ("three", 3),
@@ -24,10 +24,7 @@ fn main() {
         ("seven", 7),
         ("eight", 8),
         ("nine", 9),
-    ]
-    .iter()
-    .cloned()
-    .collect();
+    ]);
 
     let mut res1 = 0u64;
     let mut res2 = 0u64;
