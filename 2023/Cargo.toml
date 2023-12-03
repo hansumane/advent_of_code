@@ -12,5 +12,9 @@ name = "d02"
 path = "02/main.rs"
 
 [[bin]]
+name = "d03"
+path = "03/main.rs"
+
+[[bin]]
 name = "dtest"
 path = "dtest.rs"
