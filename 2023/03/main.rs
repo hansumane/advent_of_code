@@ -44,9 +44,8 @@ fn main() {
         }
 
         for (i, s) in chars.iter().enumerate() {
-            match s {
-                '*' => gears.push((li, i)),
-                _ => {}
+            if *s == '*' {
+                gears.push((li, i));
             }
         }
     }
@@ -123,9 +122,8 @@ fn main() {
         if li > 0 {
             for num in numbers.iter().filter(|(nli, ..)| *nli == li - 1) {
                 let (_, n, mut si, mut ei) = *num;
-                if si > 0 {
-                    si -= 1;
-                }
+                si = si.saturating_sub(1);
+
                 if ei < mll - 1 {
                     ei += 1;
                 }
@@ -139,9 +137,8 @@ fn main() {
         if li < lines.len() - 1 {
             for num in numbers.iter().filter(|(nli, ..)| *nli == li + 1) {
                 let (_, n, mut si, mut ei) = *num;
-                if si > 0 {
-                    si -= 1;
-                }
+                si = si.saturating_sub(1);
+
                 if ei < mll - 1 {
                     ei += 1;
                 }
@@ -153,7 +150,7 @@ fn main() {
         }
 
         if ns.len() == 2 {
-            res2 += ns.get(0).unwrap() * ns.get(1).unwrap();
+            res2 += ns.first().unwrap() * ns.get(1).unwrap();
         }
     }
 
