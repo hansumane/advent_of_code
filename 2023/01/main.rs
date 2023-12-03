@@ -83,13 +83,13 @@ fn main() {
                 res.sort_by(|(s, ..), (n, ..)| s.partial_cmp(n).unwrap());
                 let res = res.iter().map(|(.., v)| *v).collect::<Vec<&str>>();
 
-                let c = res.first().unwrap().chars().collect::<Vec<_>>().get(0).unwrap().to_owned();
+                let c = res.first().unwrap().chars().collect::<Vec<_>>().first().unwrap().to_owned();
                 let c = match c {
                     '0'..='9' => c.to_string().parse::<u64>().unwrap(),
                     _ => *translate.get(res.first().unwrap()).unwrap(),
                 };
 
-                let d = res.last().unwrap().chars().collect::<Vec<_>>().get(0).unwrap().to_owned();
+                let d = res.last().unwrap().chars().collect::<Vec<_>>().first().unwrap().to_owned();
                 let d = match d {
                     '0'..='9' => d.to_string().parse::<u64>().unwrap(),
                     _ => *translate.get(res.last().unwrap()).unwrap(),
