@@ -6,10 +6,11 @@ use std::{
 
 fn main() {
     let br = BufReader::new(File::open(args().collect::<Vec<_>>().get(1).unwrap()).unwrap());
-    let mut numbers: Vec<(usize, u64, usize, usize)> = Vec::new();
-    let mut gears: Vec<(usize, usize)> = Vec::new();
     let lines = br.lines().filter(|line| line.is_ok()).map(|line| line.unwrap()).collect::<Vec<_>>();
     let mll = lines.get(0).unwrap().len();
+
+    let mut numbers: Vec<(usize, u64, usize, usize)> = Vec::new();
+    let mut gears: Vec<(usize, usize)> = Vec::new();
 
     for (li, line) in lines.iter().enumerate() {
         let mut i = 0usize;
@@ -45,7 +46,7 @@ fn main() {
         for (i, s) in chars.iter().enumerate() {
             match s {
                 '*' => gears.push((li, i)),
-                _ => {},
+                _ => {}
             }
         }
     }
@@ -59,7 +60,7 @@ fn main() {
         if si > 0 {
             si -= 1;
             match lines.get(li).unwrap().chars().collect::<Vec<_>>().get(si).unwrap() {
-                '@'|'#'|'$'|'%'|'&'|'*'|'-'|'='|'+'|'/' => cur = true,
+                '@' | '#' | '$' | '%' | '&' | '*' | '-' | '=' | '+' | '/' => cur = true,
                 _ => {}
             }
         }
@@ -67,7 +68,7 @@ fn main() {
         if ei < mll - 1 {
             ei += 1;
             match lines.get(li).unwrap().chars().collect::<Vec<_>>().get(ei).unwrap() {
-                '@'|'#'|'$'|'%'|'&'|'*'|'-'|'='|'+'|'/' => cur = true,
+                '@' | '#' | '$' | '%' | '&' | '*' | '-' | '=' | '+' | '/' => cur = true,
                 _ => {}
             }
         }
@@ -76,7 +77,7 @@ fn main() {
             let chars = lines.get(li - 1).unwrap().chars().collect::<Vec<_>>();
             for i in si..=ei {
                 match chars.get(i).unwrap() {
-                    '@'|'#'|'$'|'%'|'&'|'*'|'-'|'='|'+'|'/' => {
+                    '@' | '#' | '$' | '%' | '&' | '*' | '-' | '=' | '+' | '/' => {
                         above = true;
                         break;
                     }
@@ -89,7 +90,7 @@ fn main() {
             let chars = lines.get(li + 1).unwrap().chars().collect::<Vec<_>>();
             for i in si..=ei {
                 match chars.get(i).unwrap() {
-                    '@'|'#'|'$'|'%'|'&'|'*'|'-'|'='|'+'|'/' => {
+                    '@' | '#' | '$' | '%' | '&' | '*' | '-' | '=' | '+' | '/' => {
                         below = true;
                         break;
                     }
