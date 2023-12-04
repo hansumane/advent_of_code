@@ -9,8 +9,8 @@ fn main() {
     let lines = br.lines().filter(|line| line.is_ok()).map(|line| line.unwrap()).collect::<Vec<_>>();
     let mll = lines.get(0).unwrap().len();
 
-    let mut numbers: Vec<(usize, u64, usize, usize)> = Vec::new();
-    let mut gears: Vec<(usize, usize)> = Vec::new();
+    let mut numbers = Vec::<(usize, u64, usize, usize)>::new();
+    let mut gears = Vec::<(usize, usize)>::new();
 
     for (li, line) in lines.iter().enumerate() {
         let mut i = 0usize;
@@ -107,7 +107,7 @@ fn main() {
 
     for gear in gears.iter() {
         let (li, gi) = *gear;
-        let mut ns: Vec<u64> = Vec::new();
+        let mut ns = Vec::<u64>::new();
 
         for num in numbers.iter().filter(|(nli, ..)| *nli == li) {
             let (_, n, si, ei) = *num;
