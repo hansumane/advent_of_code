@@ -12,7 +12,7 @@ fn main() {
         .map(|line| line.unwrap())
         .collect::<Vec<_>>();
 
-    let mut cards: Vec<(usize, Vec<u64>, Vec<u64>, u64)> = Vec::with_capacity(lines.len());
+    let mut cards = Vec::<(usize, Vec<u64>, Vec<u64>, u64)>::with_capacity(lines.len());
 
     for (li, line) in lines.iter().enumerate() {
         let mut game = line.split(": ").last().unwrap().split(" | ");
