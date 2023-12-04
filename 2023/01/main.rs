@@ -14,7 +14,7 @@ fn main() {
         "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"
     ];
 
-    let translate: HashMap<&str, u64> = HashMap::from([
+    let translate = HashMap::from([
         ("one", 1),
         ("two", 2),
         ("three", 3),
@@ -69,7 +69,7 @@ fn main() {
                  * I used to learn (python, C, C++ and Java)
                  */
 
-                let mut res: Vec<(usize, &str)> = Vec::new();
+                let mut res = Vec::<(usize, &str)>::new();
                 for pair in numerical
                     .iter()
                     .map(|n| line.match_indices(n).collect::<Vec<_>>())
