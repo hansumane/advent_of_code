@@ -6,14 +6,28 @@ use std::{
 
 fn main() {
     let br = BufReader::new(File::open(args().collect::<Vec<_>>().get(1).unwrap()).unwrap());
-    let lines = br.lines().filter(|line| line.is_ok()).map(|line| line.unwrap()).collect::<Vec<_>>();
+    let lines = br
+        .lines()
+        .filter(|line| line.is_ok())
+        .map(|line| line.unwrap())
+        .collect::<Vec<_>>();
 
     let mut cards: Vec<(usize, Vec<u64>, Vec<u64>, u64)> = Vec::with_capacity(lines.len());
 
     for (li, line) in lines.iter().enumerate() {
         let mut game = line.split(": ").last().unwrap().split(" | ");
-        let win_cards = game.next().unwrap().split_whitespace().map(|v| v.parse::<u64>().unwrap()).collect::<Vec<_>>();
-        let all_cards = game.next().unwrap().split_whitespace().map(|v| v.parse::<u64>().unwrap()).collect::<Vec<_>>();
+        let win_cards = game
+            .next()
+            .unwrap()
+            .split_whitespace()
+            .map(|v| v.parse::<u64>().unwrap())
+            .collect::<Vec<_>>();
+        let all_cards = game
+            .next()
+            .unwrap()
+            .split_whitespace()
+            .map(|v| v.parse::<u64>().unwrap())
+            .collect::<Vec<_>>();
 
         cards.push((li + 1, win_cards, all_cards, 0));
     }
