@@ -8,4 +8,4 @@ in the
 [r/adventofcode](https://www.reddit.com/r/adventofcode/)
 subreddit.
 
-![](https://github.com/hansumane/advent_of_code/grab/blob/main/2023/05/Paths_by_ValkyrieMaruIchi.gid)
+![](https://github.com/hansumane/advent_of_code/grba/blob/main/2023/05/Paths_by_ValkyrieMaruIchi.gif)
