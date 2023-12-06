@@ -1,7 +1,8 @@
 use std::{
+    collections::HashMap,
     env::args,
     fs::File,
-    io::{BufRead, BufReader}, collections::HashMap,
+    io::{BufRead, BufReader},
 };
 
 fn main() {
@@ -44,7 +45,11 @@ fn main() {
                 break;
             }
             let mut lniter = line.split_whitespace().map(|v| v.parse().unwrap());
-            res.push((lniter.next().unwrap(), lniter.next().unwrap(), lniter.next().unwrap()));
+            res.push((
+                lniter.next().unwrap(),
+                lniter.next().unwrap(),
+                lniter.next().unwrap(),
+            ));
         }
     }
 
