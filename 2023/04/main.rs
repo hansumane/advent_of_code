@@ -57,6 +57,8 @@ fn main() {
      * This is a very bad solution because here we allocate around 8 million cards
      * which must take a HUGE amount of memory and for sure is VERY SLOW
      * yet it works tho :')
+     *
+     * P.S. After brute-forcing 2023 day 5 part 2 this seems like a not that bad one
      */
 
     while ci < cards.len() {
