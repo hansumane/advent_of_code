@@ -31,6 +31,10 @@ path = "06/main.rs"
 name = "d07"
 path = "07/main.rs"
 
+[[bin]]
+name = "d08"
+path = "08/main.rs"
+
 # dtest.rs is not included in the repo
 # and is used to experiment with things
 [[bin]]
