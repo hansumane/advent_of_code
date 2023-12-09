@@ -24,6 +24,9 @@ test.*
 test-*
 test_*
 
+# inputs
+input.txt
+
 # system files
 .Trashes
 Thumbs.db
