@@ -23,6 +23,7 @@ out_*
 test.*
 test-*
 test_*
+dtest.rs
 
 # inputs
 input.txt
