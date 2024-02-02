@@ -1,7 +1,8 @@
 use std::{
+    collections::{HashMap, VecDeque},
     env::args,
     fs::File,
-    io::{BufRead, BufReader}, collections::{HashMap, VecDeque},
+    io::{BufRead, BufReader},
 };
 
 fn main() {
