@@ -7,6 +7,10 @@ edition = "2021"
 name = "d01"
 path = "01/main.rs"
 
+[[bin]]
+name = "d02"
+path = "02/main.rs"
+
 # dtest.rs is not included in the repo
 # and is used to experiment with things
 [[bin]]
