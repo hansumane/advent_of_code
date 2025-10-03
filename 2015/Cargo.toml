@@ -14,3 +14,10 @@ path = "02/main.rs"
 [[bin]]
 name = "day_03"
 path = "03/main.rs"
+
+[[bin]]
+name = "day_04"
+path = "04/main.rs"
+
+[dependencies]
+md-5 = "0.10.6"
