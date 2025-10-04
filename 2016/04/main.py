@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 
+from operator import itemgetter
+
+
 def part1(rooms):
     res = 0
     for (words, number, csum) in rooms:
         joined = "".join(words)
         alphabet = [(sym, joined.count(sym)) for sym in set(joined)]
-        alphabet.sort(key=lambda v: v[0])
-        alphabet.sort(key=lambda v: v[1], reverse=True)
+        alphabet.sort(key=itemgetter(0))
+        alphabet.sort(key=itemgetter(1), reverse=True)
         if csum == "".join(v[0] for v in alphabet[:5]):
             res += number
     return res
