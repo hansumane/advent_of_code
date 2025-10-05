@@ -1,7 +1,9 @@
- #!/usr/bin/env python3
+#!/usr/bin/env python3
+
+from hashlib import md5
+
 
 def part12(id):
-    from hashlib import md5
     i, res1, res2 = 0, "", [" " for _ in range(8)]
     while " " in res2:
         hash = md5(f"{id}{i}".encode()).hexdigest()
